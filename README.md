@@ -1,7 +1,7 @@
 ## commond
 
  ```
- # build the bundle.js in build direcotry after running uint tests
+ # Run unit tests and build bundle.js file in build directory
  tnpm run build
 
  #  Create temp server and test final javascript file

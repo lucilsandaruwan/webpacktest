@@ -4,9 +4,10 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "./node_modules/.bin/webpack-dev-server",
-    "build": "./node_modules/.bin/webpack -p"
+    "test": "find ./tests -name '*.js' | xargs mocha -R spec",
+    "kill": "kill -9 $(lsof -t -i:5000)",
+    "watch": "./node_modules/.bin/webpack-dev-server --open --port 5000 --host localhost",
+    "build": "npm run test && ./node_modules/.bin/webpack --display-error-details"
   },
   "author": "",
   "license": "ISC",
@@ -14,5 +15,8 @@
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }

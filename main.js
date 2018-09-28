@@ -1,2 +1,3 @@
-console.log("Hello webpack. Demo works");
-alert('test1');
+const operations = require('./modules/operations');
+
+console.log(operations.add(1,2));

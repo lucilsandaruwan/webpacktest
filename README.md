@@ -1,4 +1,4 @@
-## commond
+## commands
 
  ```
  # Run unit tests and build bundle.js file in build directory
